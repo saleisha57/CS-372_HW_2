@@ -11,7 +11,7 @@ public class Police extends Person
     public enum PoliceRole
     {
 	Patrol,
-	Srgent,
+	Sargent,
 	Captain,
 	Chief
     }
@@ -48,7 +48,6 @@ public class Police extends Person
     
     public void setRole(PoliceRole pr) 
     {
-	System.out.println("Set role");
 	role = pr; 
     }
 
@@ -67,9 +66,9 @@ public class Police extends Person
     }
 
     
-    public void give_money()
+    public void give_money(double amt)
     {
-	money = 15.5;
+	money += amt;
     }
 
     

@@ -53,7 +53,6 @@ public class Teacher extends Person
     
     public void setCert(TeacherCert ct) 
     {
-	System.out.println("Certification");
 	cert = ct; 
     }
 
@@ -69,9 +68,9 @@ public class Teacher extends Person
     }
 
     
-    public void give_money()
+    public void give_money(double amt)
     {
-	
+	money += amt;
     }
     
 }

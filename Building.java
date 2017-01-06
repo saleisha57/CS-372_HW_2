@@ -1,8 +1,19 @@
-public class Building
+public abstract class Building
 {
-    public Building(String name, String address)
+    String name, address;
+
+    public Building(String n, String ad)
     {
-	System.out.println("In building class.");
+	name = n;
+	address = ad;
     }
+
+    abstract void add_to_array(String nm);
+    
+    abstract void show_people();
+    
+    abstract String get_name();
+
+    abstract String get_address();
 
 }
