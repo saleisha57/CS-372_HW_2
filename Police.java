@@ -1,6 +1,13 @@
+import java.util.Random;
+
 public class Police extends Person
     implements Employee
 {
+    String name, phone_number;
+    int age, id_num;
+    double money;
+
+    
     public enum PoliceRole
     {
 	Patrol,
@@ -11,13 +18,32 @@ public class Police extends Person
 
     private PoliceRole role;
 
-    public Police(String name, int age, String phone_number)
+    public Police(String n, int a, String p)
     {
-	super(name, age, phone_number);
+	super(n, a, p);
+
+	name = n;
+	age = a;
+	phone_number = p;
+	ask_id_num();
     }
 
+    public String get_name()
+    {
+	return name;
+    }
 
-
+    public int get_age()
+    {
+	return age;
+    }
+    
+    public String get_phone()
+    {
+	return phone_number;
+    }
+    
+    
     public PoliceRole getRole() {return role;}
     
     public void setRole(PoliceRole pr) 
@@ -30,12 +56,20 @@ public class Police extends Person
 
     public void ask_id_num()
     {
-	System.out.println("What is your number.");
+	Random rand = new Random();	
+
+        id_num = rand.nextInt()%99999+100000;
     }
+
+    public int get_id()
+    {
+	return id_num;
+    }
+
     
     public void give_money()
     {
-	System.out.println("Here");
+	money = 15.5;
     }
 
     
