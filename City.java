@@ -1,3 +1,6 @@
+/**
+ * This is a city class that will model police, teachers, and children in City halls and School.
+ */
 public class City
 {
     public static void main(String[] args)
@@ -27,10 +30,18 @@ public class City
 	
 	int i;
 
+
+	System.out.println("Police:");
+
+	
 	for(i = 0; i < p.length; i++)
 	    {
 		System.out.println(p[i].getRole() + ": " + p[i].get_name() + " is " + p[i].get_age() + 
 				   " years old and has a phone number of " + p[i].get_phone() + ". Employee ID number: " + p[i].get_id());
+
+		p[i].give_money(15.25);
+		System.out.println(p[i].get_name() + " makes $" + p[i].show_money() + " an hour.");
+
 		ch.add_to_array(p[i].get_name());
 	    }
 	System.out.println("\nIn " + ch.get_name() + " at " + ch.get_address() + ":");
@@ -38,14 +49,23 @@ public class City
 	System.out.println("");
 
 
+	System.out.println("Teachers:");
+
+
 	for(i = 0; i < t.length; i++)
 	    {
 		System.out.println("Grade " + t[i].getGrade() + " " + t[i].getCert() + " teacher: " + t[i].get_name() + " is " 
 				   + t[i].get_age() + " years old and has a phone number of " 
 				   + t[i].get_phone() + ". Employee ID number: " + t[i].get_id());
+		t[i].give_money(10.25);
+		System.out.println(t[i].get_name() + " makes $" + t[i].show_money() + " an hour.");
+
 		sc.add_to_array(t[i].get_name());
 	    }
 	    System.out.println("");
+
+
+	    System.out.println("Children:");
 
 
 	for(i = 0; i < k.length; i++)

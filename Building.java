@@ -1,7 +1,13 @@
+/**
+ * Abstract class that provides functions for City_Hall.java and School.java.
+ */
 public abstract class Building
 {
     String name, address;
 
+    /**
+     * Constructor of the Building class thats sets up the name and address.
+     */
     public Building(String n, String ad)
     {
 	name = n;
